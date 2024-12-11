@@ -1,0 +1,41 @@
+1733943939047	geckodriver	INFO	Listening on 127.0.0.1:50738
+1733943942136	mozrunner::runner	INFO	Running command: "C:\\Users\\waleb\\.cache\\selenium\\firefox\\win64\\133.0.3\\firefox.exe" "--marionette" "--remote-debuggin ... 9" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\waleb\\AppData\\Local\\Temp\\rust_mozprofileYeGpgW"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1733943942650	Marionette	INFO	Marionette enabled
+1733943942874	Marionette	INFO	Listening on port 50746
+WebDriver BiDi listening on ws://127.0.0.1:50739
+Read port: 50746
+1733943943197	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://magento.softwaretestingboard.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://magento.softwaretestingboard.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://magento.softwaretestingboard.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://magento.softwaretestingboard.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://magento.softwaretestingboard.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://magento.softwaretestingboard.com."
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 182: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 182: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://magento.softwaretestingboard.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://magento.softwaretestingboard.com."
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1, line 175: Script terminated by timeout at:
+Pc@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:175:303
+Qc@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:176:157
+Qc@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:176:189
+Qc@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:176:189
+gn@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:364:457
+fn.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:368:337
+fn.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:366:431
+Zm@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:363:766
+WI/<@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:651:187
+h.yl/<@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:591:126
+h.yl/c/<@https://www.googletagmanager.com/gtag/js?id=G-1SPG0WZDNF&cx=c&_slc=1:590:418
+
+1733943965277	Marionette	INFO	Stopped listening on port 50746
+Dynamically enable window occlusion 1

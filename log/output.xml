@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-12-11T21:08:59.195244" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\Users\waleb\PycharmProjects\DataDriven_Robot\Test\LoginTest.robot">
+<kw name="Navigate to Luma homepage" owner="Project_Keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:00.318525" level="INFO">Opening browser 'headless Chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-11T21:09:00.317531" elapsed="3.900317"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-11T21:09:04.218847" elapsed="0.192483"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:04.413327" level="INFO">Clicking element 'xpath: //div[@class="qc-cmp2-summary-buttons"]/button[2]'.</msg>
+<arg>${DISAGREE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:04.412328" elapsed="0.491484"/>
+</kw>
+<status status="PASS" start="2024-12-11T21:09:00.316502" elapsed="4.588307"/>
+</kw>
+<test id="s1-t1" name="Login with valid credential and assert login success" line="11">
+<kw name="Login to Luma app and assert login success" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:04.907802" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:04.907802" elapsed="1.845699"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:06.754502" level="INFO">Typing text 'robotdatadriventest@yahoo.com' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:06.753501" elapsed="0.188270"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:06.942768" level="INFO">Typing text 'Testing2024' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:06.941771" elapsed="0.155597"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:07.098352" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:07.098352" elapsed="1.584821"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${successMessage}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-11T21:09:08.683173" elapsed="1.272404"/>
+</kw>
+<arg>robotdatadriventest@yahoo.com</arg>
+<arg>Testing2024</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:04.906803" elapsed="5.049774"/>
+</kw>
+<kw name="Logout User" owner="Project_Keywords" type="TEARDOWN">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${TOGGLE_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:09.959566" elapsed="0.059849"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:10.020438" level="INFO">Clicking element 'xpath: //button[@tabindex="-1"]'.</msg>
+<arg>${TOGGLE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:10.019415" elapsed="0.095072"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${SIGN_OUT_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:10.115485" elapsed="0.036901"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:10.153383" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[3]'.</msg>
+<arg>${SIGN_OUT_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:10.152386" elapsed="1.241426"/>
+</kw>
+<status status="PASS" start="2024-12-11T21:09:09.957577" elapsed="1.436235"/>
+</kw>
+<tag>Positive</tag>
+<status status="PASS" start="2024-12-11T21:09:04.904809" elapsed="6.489003"/>
+</test>
+<test id="s1-t2" name="User with invalid credentials should not be able to login" line="16">
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:11.398799" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:11.397805" elapsed="1.255883"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:12.654676" level="INFO">Typing text '' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:12.654676" elapsed="0.241355"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:12.897029" level="INFO">Typing text '' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:12.896031" elapsed="0.097773"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:12.993804" elapsed="0.025898"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:13.020698" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:13.019702" elapsed="0.074798"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:13.210197" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:13.094500" elapsed="0.115697"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:11.395808" elapsed="1.815405"/>
+</kw>
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:13.212210" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:13.212210" elapsed="0.915393"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:14.127603" level="INFO">Typing text '' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:14.127603" elapsed="0.323136"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:14.451735" level="INFO">Typing text 'Testing2024' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:14.451735" elapsed="0.139628"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:14.591363" elapsed="0.026926"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:14.619287" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:14.619287" elapsed="0.055852"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:14.762904" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:14.676135" elapsed="0.087765"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>Testing2024</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:13.211213" elapsed="1.552687"/>
+</kw>
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:14.765895" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:14.764897" elapsed="0.885962"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:15.653862" level="INFO">Typing text 'robotdatadriventest@yahoo.com' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:15.651857" elapsed="0.369029"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:16.021869" level="INFO">Typing text '' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:16.020886" elapsed="0.118667"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:16.139553" elapsed="0.023935"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:16.164486" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:16.163488" elapsed="0.053866"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:16.303388" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:16.217354" elapsed="0.087062"/>
+</kw>
+<arg>robotdatadriventest@yahoo.com</arg>
+<arg>${EMPTY}</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:14.763900" elapsed="1.540516"/>
+</kw>
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:16.305406" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:16.305406" elapsed="0.903912"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:17.211314" level="INFO">Typing text 'robotdatadriventest@yahoo.com' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:17.210316" elapsed="0.377616"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:17.588930" level="INFO">Typing text 'Testing202' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:17.588930" elapsed="0.130654"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:17.719584" elapsed="0.023931"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:17.744513" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:17.743515" elapsed="1.494203"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:19.526944" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:19.237718" elapsed="0.289226"/>
+</kw>
+<arg>robotdatadriventest@yahoo.com</arg>
+<arg>Testing202</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:16.304416" elapsed="3.222528"/>
+</kw>
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:19.527941" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:19.527941" elapsed="0.869864"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:20.399802" level="INFO">Typing text 'robotdatadriventest@yahoo.co' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:20.398803" elapsed="0.313162"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:20.712963" level="INFO">Typing text 'Testing2024' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:20.712963" elapsed="0.107710"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:20.820673" elapsed="0.022952"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:20.844609" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:20.844609" elapsed="1.295833"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:22.449613" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:22.141437" elapsed="0.308176"/>
+</kw>
+<arg>robotdatadriventest@yahoo.co</arg>
+<arg>Testing2024</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:19.526944" elapsed="2.923665"/>
+</kw>
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:22.451607" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:22.450609" elapsed="0.976799"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:23.428399" level="INFO">Typing text 'robotdatadriventet@yahoo.com' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:23.427408" elapsed="0.252320"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:23.680725" level="INFO">Typing text 'Testing202' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:23.680725" elapsed="0.098737"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:23.779462" elapsed="0.025930"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:23.806389" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:23.805392" elapsed="1.291941"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:25.405522" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:25.097333" elapsed="0.308189"/>
+</kw>
+<arg>robotdatadriventet@yahoo.com</arg>
+<arg>Testing202</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:22.450609" elapsed="2.954913"/>
+</kw>
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:25.406506" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:25.406506" elapsed="0.888752"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:26.297253" level="INFO">Typing text '****************************' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:26.296256" elapsed="0.334106"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:26.631360" level="INFO">Typing text 'Testing202' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:26.631360" elapsed="0.104938"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:26.737294" elapsed="0.024947"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:26.763226" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:26.762241" elapsed="0.070798"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:26.940750" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:26.834035" elapsed="0.107713"/>
+</kw>
+<arg>****************************</arg>
+<arg>Testing202</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:25.406506" elapsed="1.535242"/>
+</kw>
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:26.942745" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:26.942745" elapsed="0.884523"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:27.828267" level="INFO">Typing text 'robotdatadriventet@yahoo.com' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:27.828267" elapsed="0.372005"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:28.200272" level="INFO">Typing text '**********' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:28.200272" elapsed="0.138829"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:28.340089" elapsed="0.023935"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:28.365032" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:28.365032" elapsed="1.322234"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:29.995442" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:29.688263" elapsed="0.307179"/>
+</kw>
+<arg>robotdatadriventet@yahoo.com</arg>
+<arg>**********</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:26.941748" elapsed="3.053694"/>
+</kw>
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:29.996438" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:29.996438" elapsed="0.909350"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:30.906783" level="INFO">Typing text '1212121212121212' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:30.906783" elapsed="0.252324"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:31.160104" level="INFO">Typing text 'login' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:31.160104" elapsed="0.095745"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:31.256848" elapsed="0.023934"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:31.281780" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:31.281780" elapsed="0.066821"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:31.455316" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:31.349598" elapsed="0.105718"/>
+</kw>
+<arg>1212121212121212</arg>
+<arg>login</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:29.996438" elapsed="1.459876"/>
+</kw>
+<kw name="Login to Luma app with invalid credentials" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:31.457309" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[2]'.</msg>
+<arg>${SIGN_IN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:31.456314" elapsed="0.936728"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:32.394039" level="INFO">Typing text 'robotdatadriventest@yahoo.com' into text field 'xpath: //input[@name="login[username]"]'.</msg>
+<arg>${LOGIN_USER}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:32.393042" elapsed="0.367029"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:32.761056" level="INFO">Typing text 'short' into text field 'xpath: //input[@name="login[password]"]'.</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:32.761056" elapsed="0.121675"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-11T21:09:32.882731" elapsed="0.025931"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:32.909660" level="INFO">Clicking element 'xpath: //button[@class="action login primary"]'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:32.908662" elapsed="1.486779"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:34.701623" level="INFO">Current page does not contain text 'Welcome, Ola Wale!'.</msg>
+<arg>${successMessage}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2024-12-11T21:09:34.395441" elapsed="0.307177"/>
+</kw>
+<arg>robotdatadriventest@yahoo.com</arg>
+<arg>short</arg>
+<arg>Welcome, Ola Wale!</arg>
+<status status="PASS" start="2024-12-11T21:09:31.456314" elapsed="3.246304"/>
+</kw>
+<tag>Negative</tag>
+<status status="PASS" start="2024-12-11T21:09:11.394808" elapsed="23.307810"/>
+</test>
+<test id="s1-t3" name="Verify User can create account successfully" line="30">
+<kw name="Navigate to create account page" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:34.705613" level="INFO">Clicking element 'xpath: //ul[@class="header links"]/li[3]/a'.</msg>
+<arg>${CREATE_ACCT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:34.704613" elapsed="0.893598"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-11T21:09:37.599663" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-11T21:09:35.599209" elapsed="2.002377"/>
+</kw>
+<status status="PASS" start="2024-12-11T21:09:34.704613" elapsed="2.896973"/>
+</kw>
+<kw name="Enter user first name and last name" owner="Project_Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:37.607531" level="INFO">Typing text 'Robo' into text field 'xpath: //input[@name="firstname"]'.</msg>
+<arg>${FIRST_NAME_BOX}</arg>
+<arg>Robo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:37.605536" elapsed="0.182999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:37.788535" level="INFO">Typing text 'Frame' into text field 'xpath: //input[@name="lastname"]'.</msg>
+<arg>${LAST_NAME_BOX}</arg>
+<arg>Frame</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:37.788535" elapsed="0.124157"/>
+</kw>
+<status status="PASS" start="2024-12-11T21:09:37.603579" elapsed="0.309113"/>
+</kw>
+<kw name="Enter user email address" owner="Project_Keywords">
+<kw name="Email" owner="FakerLibrary">
+<msg time="2024-12-11T21:09:37.914717" level="INFO">${email} = gallaghersarah@example.org</msg>
+<var>${email}</var>
+<status status="PASS" start="2024-12-11T21:09:37.913723" elapsed="0.000994"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-11T21:09:37.914717" level="INFO">gallaghersarah@example.org</msg>
+<arg>${email}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-11T21:09:37.914717" elapsed="0.000000"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2024-12-11T21:09:37.915714" level="INFO">${email} = gallaghersarah@example.org</msg>
+<arg>${email}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2024-12-11T21:09:37.914717" elapsed="0.000997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:37.915714" level="INFO">Typing text 'gallaghersarah@example.org' into text field 'xpath: //input[@name="email"]'.</msg>
+<arg>${EMAIL_ACCT_CREATE}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:37.915714" elapsed="0.149568"/>
+</kw>
+<status status="PASS" start="2024-12-11T21:09:37.912692" elapsed="0.152590"/>
+</kw>
+<kw name="Enter user password and confirm password" owner="Project_Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:38.067310" level="INFO">Typing text 'RobotTesting2024' into text field 'xpath: //input[@name="password"]'.</msg>
+<arg>${PASSWRD_ACCT_CREATE}</arg>
+<arg>RobotTesting2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:38.067310" elapsed="0.178489"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:38.246798" level="INFO">Typing text 'RobotTesting2024' into text field 'xpath: //input[@name="password_confirmation"]'.</msg>
+<arg>${PSWRD_ACCT_CREATE_COM}</arg>
+<arg>RobotTesting2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:38.245799" elapsed="0.116698"/>
+</kw>
+<status status="PASS" start="2024-12-11T21:09:38.066281" elapsed="0.296216"/>
+</kw>
+<kw name="Create account and assert that account has been created successfully" owner="Project_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-11T21:09:38.363516" level="INFO">Clicking element 'xpath: //button[@title="Create an Account"]'.</msg>
+<arg>${CREATE_ACCOUNT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-11T21:09:38.363516" elapsed="2.991316"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Welcome, Robo Frame!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-11T21:09:41.354832" elapsed="1.165980"/>
+</kw>
+<status status="PASS" start="2024-12-11T21:09:38.362497" elapsed="4.158315"/>
+</kw>
+<tag>Positve Test</tag>
+<status status="PASS" start="2024-12-11T21:09:34.703617" elapsed="7.817195"/>
+</test>
+<doc>Login test scinerios for Luma web application</doc>
+<status status="PASS" start="2024-12-11T21:08:59.201226" elapsed="43.320582"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Negative</stat>
+<stat pass="1" fail="0" skip="0">Positive</stat>
+<stat pass="1" fail="0" skip="0">Positve Test</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="LoginTest">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
