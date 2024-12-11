@@ -59,12 +59,4 @@ After running the tests, you can find the logs and reports in the `results/` dir
 
 Feel free to fork the repository, submit issues, or create pull requests. Any contributions to improve the project are welcome.
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
-
-Happy testing!
-
 
